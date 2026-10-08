@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Neon Rush</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <main class="game-shell">
+
+        <!-- Pontuação -->
+        <div class="hud">
+
+            <div class="logo">
+                🏁 NEON RUSH
+            </div>
+
+            <div class="score">
+                ⭐ <span id="score">0</span>
+            </div>
+
+        </div>
+
+
+        <!-- Área do jogo -->
+        <div
+            id="game-container"
+            aria-label="Jogo Neon Rush 3D"
+        ></div>
+
+
+        <!-- Tela inicial -->
+        <section
+            id="start-screen"
+            class="screen"
+        >
+
+            <div class="panel">
+
+                <h1>
+                    🏎️ NEON RUSH
+                </h1>
+
+                <p>
+                    Desvie dos carros vermelhos
+                    e pegue as moedas.
+                </p>
+
+                <p>
+                    Use
+                    <strong>← →</strong>
+                    ou
+                    <strong>A / D</strong>
+                </p>
+
+                <button
+                    id="start-button"
+                    type="button"
+                >
+                    JOGAR
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Tela de Game Over -->
+        <section
+            id="game-over-screen"
+            class="screen hidden"
+        >
+
+            <div class="panel">
+
+                <h1>
+                    💥 BATEU!
+                </h1>
+
+                <p>
+                    Pontuação:
+                    <strong id="final-score">0</strong>
+                </p>
+
+                <button
+                    id="restart-button"
+                    type="button"
+                >
+                    JOGAR NOVAMENTE
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Controles para celular -->
+        <div
+            class="mobile-controls"
+            aria-label="Controles para celular"
+        >
+
+            <button
+                id="left-button"
+                type="button"
+                aria-label="Mover para esquerda"
+            >
+                ◀
+            </button>
+
+            <button
+                id="right-button"
+                type="button"
+                aria-label="Mover para direita"
+            >
+                ▶
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- Biblioteca 3D -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.min.js"></script>
+
+    <!-- Nosso código -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

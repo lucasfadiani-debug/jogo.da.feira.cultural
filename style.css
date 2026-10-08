@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: #05070d;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+#game {
+    width: 100%;
+    max-width: 1100px;
+    height: 700px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #080b14;
+}
+
+#gameArea {
+    width: 100%;
+    height: 100%;
+}
+
+#gameArea canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.hud {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    z-index: 5;
+    pointer-events: none;
+}
+
+.hud div {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.screen {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    z-index: 10;
+}
+
+.box {
+    background: #0b0e1c;
+
+    padding: 30px;
+
+    width: 90%;
+    max-width: 380px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    border: 1px solid #30354a;
+}
+
+.box h1 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.box p {
+    color: #b7bdcf;
+    line-height: 1.5;
+}
+
+button {
+    border: none;
+
+    padding: 14px 25px;
+
+    margin-top: 10px;
+
+    border-radius: 10px;
+
+    background: #35d7ff;
+
+    color: #001018;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    min-height: 44px;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.mobileControls {
+    display: none;
+
+    position: absolute;
+
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 20;
+
+    pointer-events: none;
+}
+
+.mobileControls button {
+    width: 65px;
+    height: 55px;
+
+    margin-top: 0;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    color: white;
+
+    border: 1px solid #555;
+
+    pointer-events: auto;
+
+    font-size: 22px;
+}
+
+@media (max-width: 700px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    #game {
+        margin: 0;
+
+        width: 100%;
+        height: 100vh;
+
+        max-width: none;
+
+        border-radius: 0;
+    }
+
+    .hud {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+    }
+
+    .hud div {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .box {
+        padding: 25px 20px;
+    }
+
+    .mobileControls {
+        display: flex;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .hud div {
+        font-size: 12px;
+        padding: 7px 9px;
+    }
+
+    .mobileControls {
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+    }
+
+    .mobileControls button {
+        width: 60px;
+        height: 52px;
+    }
+}
+
